@@ -132,7 +132,7 @@ export class LinuxService {
     public async getWinePath(): Promise<string> {
         if (await this.isNixOS()) {
             // Use system wine for nixos
-            return "wine";
+            return "wine64";
         }
 
         if (!this.staticConfig.has("proton-folder")) {
